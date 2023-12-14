@@ -7,7 +7,7 @@ const getProducts = async (req, res) => {
     const products = await Products.find({stock: {$gt: 0}})
     res.status(200).send(products);
   } catch (error) {
-    res.status(404).send({ message: "Theres no colors" });
+    res.status(404).send({ message: "There are no products available." });
   }
 };
 
